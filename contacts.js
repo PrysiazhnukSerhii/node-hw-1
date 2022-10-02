@@ -30,11 +30,8 @@ async function addContact(name, email, phone) {
 
   await updateContacts(contacts);
 
-  // console.log(contacts);
-  console.log(newContact);
   return newContact;
 }
-// подивитись чи не буде зациклюватись ато ебать клепає цю функцію
 
 async function removeContact(contactId) {
   const contacts = await listContacts();
@@ -49,7 +46,7 @@ async function removeContact(contactId) {
 
   await updateContacts(contacts);
 
-  return contacts[result];
+  return result;
 }
 
 module.exports = {
@@ -58,5 +55,3 @@ module.exports = {
   addContact,
   removeContact,
 };
-
-//npm run startcon:dev
